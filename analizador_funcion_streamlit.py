@@ -13,7 +13,7 @@ st.set_page_config(page_title="Analizador de funciones", layout="wide")
 st.title("Analizador de funciones — Puntos críticos, monotonicidad y gráfica - Hecho por: Angela Alfaro - Yilmer Diaz - Erika Molina")
 
 # Entrada
-func_text = st.text_input("Ingrese la función en variable x (ej: sin(x) + x**2):", "sin(x) + x**2")
+func_text = st.text_input("Ingrese la función en variable x")
 col1, col2 = st.columns(2)
 with col1:
     x_min = st.number_input("Dominio: x mínimo", value=-10.0, step=1.0)
@@ -228,18 +228,3 @@ with st.expander('Mostrar gráfica (matplotlib)'):
     st.pyplot(fig)
 
 st.write('---')
-st.markdown('**Notas y limitaciones:**')
-st.markdown('''
-- El análisis numérico busca raíces de la derivada en el intervalo [x_min, x_max]. Si la función tiene raíces fuera de este intervalo, no serán detectadas.
-- Para funciones muy complicadas (transcendentales con muchos oscilaciones) la búsqueda numérica puede necesitar más muestras o un intervalo mayor.
-- Si la entrada contiene parámetros que no sean la variable x (ej: a, b) la evaluación fallará; use expresiones en x únicamente.
-- El método usa una mezcla de detección de cambio de signo y nsolve; en algunos casos no encontrará raíces múltiples coincidentes.
-''')
-
-st.markdown('**Cómo citar / desplegar:**')
-st.markdown('''
-1. Instale dependencias: `pip install streamlit sympy numpy matplotlib`
-2. Guarde este archivo como `analizador_funcion_streamlit.py`.
-3. Ejecute: `streamlit run analizador_funcion_streamlit.py`.
-4. En el navegador, modifique la función y el dominio para su análisis.
-''')
