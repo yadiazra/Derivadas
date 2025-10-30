@@ -13,7 +13,7 @@ st.set_page_config(page_title="Analizador de funciones", layout="wide")
 st.title("Analizador de funciones — Puntos críticos, monotonicidad y gráfica - Hecho por: Angela Alfaro - Yilmer Diaz - Erika Molina")
 
 # Entrada
-func_text = st.text_input("Ingrese la función en variable x")
+func_text = st.text_input("Ingrese la función en variable x (ej: sin(x) + x**2):", "sin(x) + x**2")
 col1, col2 = st.columns(2)
 with col1:
     x_min = st.number_input("Dominio: x mínimo", value=-10.0, step=1.0)
