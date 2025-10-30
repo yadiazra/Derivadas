@@ -10,7 +10,7 @@ import matplotlib.pyplot as plt
 from matplotlib.ticker import MaxNLocator
 
 st.set_page_config(page_title="Analizador de funciones", layout="wide")
-st.title("Analizador de funciones — Puntos críticos, monotonicidad y gráfica")
+st.title("Analizador de funciones — Puntos críticos, monotonicidad y gráfica - Hecho por: Angela Alfaro - Yilmer Diaz - Erika Molina")
 
 # Entrada
 func_text = st.text_input("Ingrese la función en variable x (ej: sin(x) + x**2):", "sin(x) + x**2")
